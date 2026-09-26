@@ -1,0 +1,25 @@
+services:
+  triadflux:
+    build: .
+    restart: unless-stopped
+    command: ["python", "bitget_live_runner.py", "--symbol", "${BITGET_SYMBOL:-rAAPLUSDT}", "--interval", "${BITGET_INTERVAL:-15m}", "--poll", "${BITGET_POLL_SECONDS:-20}"]
+    environment:
+      PYTHONUNBUFFERED: "1"
+      BITGET_REST_URL: "https://api.bitget.com"
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+
+  dashboard:
+    build: .
+    restart: unless-stopped
+    command: ["streamlit", "run", "dashboard.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.headless=true"]
+    environment:
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    ports:
+      - "8501:8501"
+    depends_on:
+      - triadflux

@@ -1,0 +1,38 @@
+symbol: DEMO
+bar_interval: 15m
+
+features:
+  atr_window: 14
+  adx_window: 14
+  trend_fast: 20
+  trend_slow: 50
+  breakout_window: 20
+  mean_window: 20
+  volatility_window: 30
+  volume_window: 20
+
+regime:
+  adx_trending: 25
+  adx_ranging: 18
+  efficiency_trending: 0.35
+  volatility_z_volatile: 1.5
+
+risk:
+  initial_equity: 10000
+  max_risk_per_trade: 0.005
+  max_gross_exposure: 0.50
+  stop_atr: 1.8
+  target_atr: 3.0
+  min_strategy_trades: 8
+  performance_lookback: 40
+  max_drawdown_pause: 0.10
+  min_regime_confidence: 0.55
+  min_signal_score: 0.25
+  fee_bps: 8
+  slippage_bps: 5
+
+allocation:
+  best_strategy_weight: 0.55
+  second_strategy_weight: 0.30
+  third_strategy_weight: 0.15
+  shrinkage_prior_return: 0.0

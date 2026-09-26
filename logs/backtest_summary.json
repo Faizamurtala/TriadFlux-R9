@@ -1,0 +1,65 @@
+{
+  "bars": 8950,
+  "in_sample_bars": 6070,
+  "out_of_sample_bars": 2880,
+  "final_equity": 5891.420617178077,
+  "trade_count": 463,
+  "regime_strategy_table": [
+    {
+      "strategy": "mean_reversion_fade",
+      "regime": "RANGING",
+      "n": 56,
+      "mean_ret": -5.435487572090763e-05,
+      "sharpe": -0.3354213877214346
+    },
+    {
+      "strategy": "mean_reversion_fade",
+      "regime": "TRENDING",
+      "n": 2,
+      "mean_ret": 0.00011779390792944972,
+      "sharpe": 0.11788473515946639
+    },
+    {
+      "strategy": "mean_reversion_fade",
+      "regime": "VOLATILE",
+      "n": 11,
+      "mean_ret": 0.00012138502998035067,
+      "sharpe": 0.38981583129933783
+    },
+    {
+      "strategy": "momentum_breakout",
+      "regime": "RANGING",
+      "n": 9,
+      "mean_ret": -2.3280623895869907e-05,
+      "sharpe": -0.05107255173468403
+    },
+    {
+      "strategy": "momentum_breakout",
+      "regime": "VOLATILE",
+      "n": 2,
+      "mean_ret": -1.4256664054846242e-05,
+      "sharpe": -0.030941763891398907
+    },
+    {
+      "strategy": "trend_following",
+      "regime": "RANGING",
+      "n": 586,
+      "mean_ret": 5.401100844517852e-05,
+      "sharpe": 1.0396993455208718
+    },
+    {
+      "strategy": "trend_following",
+      "regime": "TRENDING",
+      "n": 43,
+      "mean_ret": -0.00012546263181816104,
+      "sharpe": -0.7408277230771444
+    },
+    {
+      "strategy": "trend_following",
+      "regime": "VOLATILE",
+      "n": 91,
+      "mean_ret": 8.321380100726256e-05,
+      "sharpe": 0.7314650361971566
+    }
+  ]
+}
